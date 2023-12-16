@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cx0jxttmy0n4l"]
+
+[ext_resource type="AudioStream" uid="uid://cl87satosdp7c" path="res://sound/Dead.ogg" id="1_36t60"]
+[ext_resource type="Script" path="res://scripts/soundRemover.gd" id="2_tts6t"]
+
+[node name="DeathSound" type="AudioStreamPlayer"]
+stream = ExtResource("1_36t60")
+autoplay = true
+script = ExtResource("2_tts6t")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

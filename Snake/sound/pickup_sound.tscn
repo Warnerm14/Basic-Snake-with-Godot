@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://8vaumbvfthv6"]
+
+[ext_resource type="AudioStream" uid="uid://dpfqhjvyhovd4" path="res://sound/Pickup.ogg" id="1_71y42"]
+[ext_resource type="Script" path="res://scripts/soundRemover.gd" id="2_a5ygs"]
+
+[node name="PickupSound" type="AudioStreamPlayer"]
+stream = ExtResource("1_71y42")
+autoplay = true
+script = ExtResource("2_a5ygs")
+
+[connection signal="finished" from="." to="." method="_on_finished"]
